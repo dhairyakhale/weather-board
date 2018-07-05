@@ -1,0 +1,140 @@
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: Monospace, sans-serif;
+	background-color: blueviolet;
+	color: whitesmoke;
+}
+
+.row {
+	width: 100%;
+	height: 30%;
+}
+.heading {
+	padding: .5em 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 5em;
+}
+.col-lg-6 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.input-group {
+	display: flex;
+}
+.form-control {
+	font-size: 2em;
+}
+.input-group-btn {
+	display: inline-flex;
+}
+.btn {
+	padding-left: 2em;
+	padding-right: 2em;
+	font-size: 1em;
+}
+
+.middle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 65%;
+	width: 100%;
+}
+.display {
+	display: grid;
+	grid-gap: 1em;
+
+	height: 80%;
+	width: 60%;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 1em;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+	justify-content: center;
+
+	background-color: rgba(255, 255, 255, .95);
+	color: blueviolet;
+}
+#cityname {
+	grid-column-start: 1;
+	grid-column-end: 8;
+	grid-row-start: 1;
+	grid-row-end: 3;
+    
+    font-size: 3em;
+}
+#temp {
+	grid-column-start: 1;
+	grid-column-end: 8;
+	grid-row-start: 3;
+	grid-row-end: 9;
+    
+	font-size: 8em;
+}
+#weather-icon {
+	grid-column-start: 8;
+	grid-column-end: 10;
+	grid-row-start: 1;
+	grid-row-end: 3;
+
+	font-size: 3.25em;
+}
+#desc {
+	grid-column-start: 10;
+	grid-column-end: 17;
+	grid-row-start: 1;
+	grid-row-end: 3;
+    
+    font-size: 2em;
+}
+#clouds {
+	grid-column-start: 8;
+	grid-column-end: 17;
+	grid-row-start: 3;
+	grid-row-end: 5;
+    
+    font-size: 2em;
+}
+#wind {
+	grid-column-start: 8;
+	grid-column-end: 17;
+	grid-row-start: 5;
+	grid-row-end: 7;
+    
+    font-size: 2em;
+}
+#humidity {
+	grid-column-start: 8;
+	grid-column-end: 17;
+	grid-row-start: 7;
+	grid-row-end: 9;
+    
+    font-size: 2em;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+
+	height: 5%;
+	width: 100%;
+
+	background-color: rgba(0, 0, 0, .6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+a:link {
+	color: whitesmoke;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<title>Weather Board</title>
+		<!-- https://websygen.github.io/owfont/ -->
+		<link href="css/owfont-regular.css" rel="stylesheet" type="text/css">
+		
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+	</head>
+	<body>
+		<!--https://getbootstrap.com/docs/3.3/components/#input-groups-buttons-->
+		<div class="row">
+			<span class="heading">Weather Board</span>
+			<div class="col-lg-6">
+                <form action="/" method="post">
+                    <div class="input-group">
+                        <input name="city" type="text" class="form-control" placeholder="Enter a City" required>
+                        <span class="input-group-btn">
+                            <input class="btn btn-default" type="submit" value="Get Weather">
+                        </span>    
+                    </div><!-- /input-group -->
+                </form>
+			</div><!-- /.col-lg-6 -->
+		</div><!-- /.row -->
+
+		<div class="middle">
+			<div class="display">
+				<% if(locals.error !== null){ %>
+					<%= locals.error %>
+				<% } else if(locals.Weather !== null){ %>
+					<span id="cityname" class="cell"><%= locals.cityname %></span>
+					<span id="temp" class="cell"><%= parseInt(locals.temp) %>ºC</span>
+					<span id="weather-icon" class="cell"><i class="owf <%= locals.condition_id %>"></i></span>
+					<span id="desc" class="cell"><%= locals.desc %></span>
+					<span id="clouds" class="cell">Cloud cover: <%= locals.clouds %>%</span>
+					<span id="wind" class="cell"><%= `${locals.wind_speed} km/s at  ${locals.wind_deg}º` %></span>
+					<span id="humidity" class="cell">Humidity: <%= parseInt(locals.humidity) %>%</span>
+				<% } %>
+			</div>
+		</div>
+
+		<footer>
+			Made by&nbsp;<a href="https://www.github.com/dhairyakhale">@dhairyakhale</a>&nbsp;using OpenWeatherMap API
+		</footer>
+	</body>
+</html>
