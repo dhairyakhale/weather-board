@@ -1,5 +1,7 @@
 # weather-board
 
+The app is hosted at https://gentle-oasis-28186.herokuapp.com/
+
 A simple weather app inspired by [this tutorial](https://codeburst.io/build-a-weather-website-in-30-minutes-with-node-js-express-openweather-a317f904897b).
 
 OpenWeatherMap API was used to acess the current weather data of various cities. Express/Node.js is used for backend, and HTML-CSS is used for front-end.
